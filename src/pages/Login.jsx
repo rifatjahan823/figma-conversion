@@ -1,40 +1,35 @@
- 
-import React from 'react';
-import { Form,Button,Container} from 'react-bootstrap';
+ import React from 'react';
+import { Form,Button} from 'react-bootstrap';
 import vector from "../../src/Vector.png";
+
 const Login = () => {
+
   return (
-        <Container style={{background:"whitesmoke",minHeight:'100vh'}}>
-         
-        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-         <div style={{margin:'10vh'}}>
+        <div className='min-vh-100 d-flex justify-content-center align-items-center' style={{background:"whitesmoke"}}>        
+         <div className='mt-5 pt-5'>
         {/* logo div  */}
-          <div style={{textAlign:'center',background:' #0D6EFD'
-           ,padding: '25px',width:'80px',height:'60px',borderRadius: '37.5px 0px',marginLeft:'8rem'}}>
-          <img style={{paddingTop:'6px'}} src={vector} alt="" />
+          <div className='text-center' style={{background:' #0D6EFD',padding:'23px 30px',width:'85px',height:'70px',borderRadius: '37.5px 0px',marginLeft:'8rem'}}>
+          <img className='img-fluid' src={vector} alt="logo" />
           </div>
-
-         <h1 style={{textAlign:'center'}}>Please sign in</h1>
-
+         <h1 className='text-center py-2'>Please sign in</h1>
          {/* form section  */}
-            <Form>
+            <Form className='pb-5'>
             <Form.Group controlId="formBasicEmail">   
             <Form.Control style={{padding:'0.8rem',width:'366px'}} type="email" placeholder="Email Address" />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">   
             <Form.Control style={{padding:'0.8rem',width:'366px'}} type="Password" placeholder="Password" />
             </Form.Group>
-             <Form.Group style={{padding:'1.2rem 0'}} controlId="formBasicCheckbox">
+             <Form.Group className='py-3' controlId="formBasicCheckbox">
              <Form.Check type="checkbox" label="Remember me" />
              </Form.Group>
-             <Button style={{padding:'0.8rem',width:'396px',background:'#0D6EFD',color:'#fff',border:'none'}} type="submit">
+             <Button className='w-100 p-2' style={{background:'#0D6EFD',color:'#fff'}}type="submit">
               Sign Up
               </Button>
-              </Form>          
+              </Form>
+              <p className='text-center pt-5 mt-5'>&copy;2017-2021 Company Name</p>          
           </div>
          </div>
-         <p style={{textAlign:'center',paddingTop:'4rem'}}>&copy;2017-2021 Company Name</p>
-         </Container>
   )
 }
 
