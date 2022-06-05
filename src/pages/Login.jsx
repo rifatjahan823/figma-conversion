@@ -1,36 +1,45 @@
  import React from 'react';
 import { Form,Button} from 'react-bootstrap';
-import vector from "../../src/Vector.png";
+import { Link } from 'react-router-dom';
+import vector from "../../src/logo.png";
+ 
 
 const Login = () => {
 
   return (
         <div className='min-vh-100 d-flex px-5 justify-content-center align-items-center' style={{background:"whitesmoke",overflow:'hidden'}}>        
-         <div className='mt-5 pt-5'>
+         <div>
         {/* logo div  */}
-          <div className='text-center' style={{background:' #0D6EFD',padding:'23px 30px',width:'85px',height:'70px',borderRadius: '37.5px 0px',marginLeft:'7rem'}}>
+          <div className='text-center'>
           <img className='img-fluid' src={vector} alt="logo" />
           </div>
-         <h1 className='text-center py-2'>Please sign in</h1>
+         <h2 className='text-center py-2'>Log in to your account</h2>
+         <p className='text-center text-secondary'>Welcome back! Please enter your details</p>
          {/* form section  */}
           
-         <Form className='pb-5'>
-            <Form.Group controlId="formBasicEmail">   
-            <Form.Control style={{padding:'0.8rem',width:'325px'}} type="email" placeholder="Email Address" />
+         <Form className='pb-3'>
+            <Form.Group className='pb-2' controlId="formBasicEmail">
+            <Form.Label>Email</Form.Label>   
+            <Form.Control style={{padding:'0.8rem',width:'325px'}} type="email" placeholder="Enter your email " />
             </Form.Group>
-            <Form.Group controlId="formBasicPassword">   
-            <Form.Control style={{padding:'0.8rem',width:'325px'}} type="Password" placeholder="Password" />
+            <Form.Label>Password</Form.Label>
+            <Form.Group className='pb-2' controlId="formBasicPassword">   
+            <Form.Control style={{padding:'0.8rem',width:'325px'}} type="Password" placeholder="Password"  />
             </Form.Group>
-             <Form.Group className='py-3' controlId="formBasicCheckbox">
+             <Form.Group className='py-3 d-flex justify-content-between' controlId="formBasicCheckbox">
              <Form.Check type="checkbox" label="Remember me" />
+             <a href="">Forgot Password</a>
              </Form.Group>
              <Button className='w-100 p-2' style={{background:'#0D6EFD',color:'#fff'}}type="submit">
-              Sign Up
+              Sign In
               </Button>
               </Form>
-         
+
+              <Button variant="outline-primary" className='w-100 p-2 fw-bold'type="submit">
+              <i class="fa-brands fa-google"></i> Sign in with Google
+              </Button>
            
-              <p className='text-center pt-5 mt-5'>&copy;2017-2021 Company Name</p>          
+               <p className='text-center text-secondary pt-5'>Don't have an account?<Link to='/register'>Sign Up</Link></p>          
           </div>
          </div>
   )
