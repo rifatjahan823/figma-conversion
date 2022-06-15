@@ -1,7 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import {faCaretDown,faUser,faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from "../../src/Vector.png";
 const Home = () => {
@@ -138,8 +136,8 @@ const Home = () => {
                         <p>In Protect time, when prompted with Ready to wrap up, select Start. This causes your virtual commute to start immediately. Set up virtual commutes The first time you open Protect time, you are prompted to schedule your virtual-commute reminders. Select the days and time of day you want to see the virtual commute reminders, and then select Set reminder. You can schedule reminders for any day of the week, including days not configured as workdays.</p>
                         </div>
                        <div className='text-center mt-5'>
-                       <button className='comment-bt-1 btn btn-primary me-2'> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
-                        <button className='comment-bt-2 btn border border-2 border-primary text-primary'><i class="fa-regular fa-square-plus"></i> View Original</button>
+                       <button className='comment-bt-1 btn btn-primary me-2 mt-4'> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
+                        <button className='comment-bt-2 btn border border-2 border-primary text-primary mt-4'><i class="fa-regular fa-square-plus"></i> View Original</button>
 
                         <p className='mt-3'>How was This Summery?</p>
                         <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16">
