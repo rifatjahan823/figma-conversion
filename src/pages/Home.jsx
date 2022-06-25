@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Modal, Nav, Navbar, Tab, Tabs } from 'react-bootstrap';
+import { Button, Collapse, Container,  Nav, Navbar, Tab, Tabs } from 'react-bootstrap';
 import logo from "../../src/Vector.png";
 import { BsEmojiSmile,BsEmojiAngry,BsEmojiHeartEyes,BsClipboard,BsBoxArrowUp,BsBookmark,BsHouseDoorFill,BsBarChartLine,BsFacebook,BsLinkedin,BsTwitter} from "react-icons/bs";
 const Home = () => {
-// ----------for Modal----------
-const [show, setShow] = useState(false);
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+// ----------for Collapse----------
+const [open,setOPen]=useState(false)
     return (
       <div className=''>
         <div className=''>
@@ -112,20 +110,17 @@ const handleShow = () => setShow(true);
                         </div>
                         <div className='border-bottom my-5'></div>
                        <div className='text-center mt-5'>
-                       <button type="button" className='comment-bt-1 btn btn-primary me-2'onClick={handleShow}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
-                       {/* <!-- Modal --> */}
-                       <Modal className='mt-5' show={show} onHide={handleClose}>
-                             <Modal.Header  closeButton>
-                            <Modal.Title>Share Summary</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body >
-                            <BsFacebook className='me-3 fs-3' style={{color:"#4267B2"}}/>
-                            <BsLinkedin className='fs-3' style={{color:'#0072b1'}}/>
-                            <BsTwitter className='ms-3 fs-3'style={{color:'#00acee '}}/>
-                            </Modal.Body>
-                        </Modal>
-                        <button className='comment-bt-2 btn border border-2 border-primary text-primary '><i class="fa-regular fa-square-plus"></i> View Original</button>
-                        <div className=' w-50 mx-auto mt-5'>
+                       <button type="button" className='comment-bt-1 btn btn-primary me-2'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
+                       <button className='comment-bt-2 btn border border-2 border-primary text-primary '><i class="fa-regular fa-square-plus"></i> View Original</button>
+                        {/* ------collapse---------- */}
+                         <Collapse in={open}>
+                        <div style={{marginLeft:"20%",width:"28%"}} className='position-absolute mt-2 py-2  border' id="collapse">
+                           <BsFacebook className='me-3 fs-4' style={{color:"#4267B2"}}/>
+                            <BsLinkedin className='fs-4' style={{color:'#0072b1'}}/>
+                            <BsTwitter className='ms-3 fs-4'style={{color:'#00acee '}}/>
+                       </div>
+                       </Collapse>
+                        <div className=' w-75 mx-auto mt-5 pt-2'>
                         <h5 className=''>How was This Summery?</h5>
                         < BsEmojiSmile  style={{fontSize:'25px',color:"#FFDA6A"}}/>  
                         < BsEmojiSmile className='mx-2' style={{fontSize:'25px',color:"#FFDA6A"}}/> 
@@ -182,20 +177,17 @@ const handleShow = () => setShow(true);
                         </div>
                         <div className='border-bottom my-5'></div>
                         <div className='text-center mt-5'>
-                       <button className='comment-bt-1 btn btn-primary me-2'onClick={handleShow} > <i class="fa-regular fa-square-plus"></i> Share Summary</button>
-                         {/* <!-- Modal --> */}
-                         <Modal className='mt-5' show={show} onHide={handleClose}>
-                             <Modal.Header  closeButton>
-                            <Modal.Title>Share Summary</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body >
-                            <BsFacebook className='me-3 fs-3' style={{color:"#4267B2"}}/>
-                            <BsLinkedin className='fs-3' style={{color:'#0072b1'}}/>
-                            <BsTwitter className='ms-3 fs-3'style={{color:'#00acee '}}/>
-                            </Modal.Body>
-                        </Modal>
+                        <button className='comment-bt-1 btn btn-primary me-2'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
                         <button className='comment-bt-2 btn border border-2 border-primary text-primary '><i class="fa-regular fa-square-plus"></i> View Original</button>
-                        <div className=' w-50  mx-auto mt-5' >
+                        {/* ------collapse---------- */}
+                        <Collapse in={open}>
+                        <div  style={{marginLeft:"20%",width:"28%"}} className=' mt-2 py-2  border position-absolute' id="collapse"> 
+                        <BsFacebook className='me-3 fs-3' style={{color:"#4267B2"}}/>
+                        <BsLinkedin className='fs-3' style={{color:'#0072b1'}}/>
+                        <BsTwitter className='ms-3 fs-3'style={{color:'#00acee '}}/>
+                       </div>
+                       </Collapse>
+                        <div className=' w-75  mx-auto mt-5 pt-2' >
                         <h5 >How was This Summery?</h5>
                           <BsEmojiAngry style={{fontSize:"25px"}}/>  
                           <BsEmojiHeartEyes style={{fontSize:"25px",marginLeft:"25px"}}/>  
