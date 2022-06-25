@@ -84,25 +84,25 @@ const [open,setOPen]=useState(false)
             <div className='col-md-8 col-12'>
                 <div className='card p-4'>
                     <div className='comment-area row align-items-top'>
-                        <div className='comment-box col-8'>
+                        <div className='comment-box col-7'>
                             <h3><i style={{color:'#0D6EFD'}} class="fa-solid fa-square"></i>  Virtual Commute</h3>
-                            <div className='comment-date d-flex'>
-                                <div className='mail'>
-                                    <p>microsoft.com</p>
-                                </div>
-                                <div style={{width:"1.5px",height:'14px',backgroundColor:"#6C757D",margin:'7px 5px',}}></div>
-                                <div className='date'>
-                                    <p>April 14 2022</p>
-                                </div>
-                            </div>
                         </div>
-                        <div className='col-4 text-end'>
+                        <div className='col-5 text-end'>
                         <BsClipboard/>
                         <BsBoxArrowUp style={{marginLeft:'10px'}}/>
                         <BsBookmark style={{marginLeft:'10px'}}/>
                         </div>
-                    </div>
-                    <div className='comment-description'>
+                     </div>
+                     <div className='comment-date d-flex'>
+                    <div className='mail'>
+                         <p>microsoft.com</p>
+                        </div>
+                        <div style={{width:"1.5px",height:'14px',backgroundColor:"#6C757D",margin:'7px 5px',}}></div>
+                        <div className='date'>
+                      <p>April 14 2022</p>
+                     </div>
+                     </div>
+                     <div className='comment-description'>
                         <div className='comment-top'>
                         <p>The Up-next card prompts you to "wrap up your day," you can select it to start your virtual commute now. If you've configured virtual commute reminders, the message appears 30 minutes before the time that you configured. For information about making this and other settings, see Insights app settings.</p>
                         <p> Within Protect time </p>
@@ -110,17 +110,19 @@ const [open,setOPen]=useState(false)
                         </div>
                         <div className='border-bottom my-5'></div>
                        <div className='text-center mt-5'>
-                       <button type="button" className='comment-bt-1 btn btn-primary me-2'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
-                       <button className='comment-bt-2 btn border border-2 border-primary text-primary '><i class="fa-regular fa-square-plus"></i> View Original</button>
+                       <div className='d-flex justify-content-center'>
+                       <button type="button" className='btn btn-primary me-2 px-2 px-md-4'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
+                       <button className='comment-bt-2 btn border border-2 border-primary text-primary px-2 px-md-4'><i class="fa-regular fa-square-plus"></i> View Original</button>
+                       </div>
                         {/* ------collapse---------- */}
                          <Collapse in={open}>
-                        <div style={{marginLeft:"20%",width:"28%"}} className='position-absolute mt-2 py-2  border' id="collapse">
+                        <div style={{marginLeft:"20%",width:"50%"}} className='position-absolute mt-2 py-2' id="collapse">
                            <BsFacebook className='me-3 fs-4' style={{color:"#4267B2"}}/>
                             <BsLinkedin className='fs-4' style={{color:'#0072b1'}}/>
                             <BsTwitter className='ms-3 fs-4'style={{color:'#00acee '}}/>
                        </div>
                        </Collapse>
-                        <div className=' w-75 mx-auto mt-5 pt-2'>
+                        <div className=' w-100 mx-auto mt-5 pt-2'>
                         <h5 className=''>How was This Summery?</h5>
                         < BsEmojiSmile  style={{fontSize:'25px',color:"#FFDA6A"}}/>  
                         < BsEmojiSmile className='mx-2' style={{fontSize:'25px',color:"#FFDA6A"}}/> 
@@ -150,25 +152,25 @@ const [open,setOPen]=useState(false)
             </div>
             <div className='col-md-8 col-12'>
                 <div className='card p-4'>
-                    <div className='comment-area row align-items-top'>
-                        <div className='comment-box col-8'>
-                            <h3><i style={{color:'#0D6EFD'}} class="fa-solid fa-square"></i>  Virtual Commute</h3>
-                            <div className='comment-date d-flex'>
-                                <div className='mail'>
-                                    <p>microsoft.com</p>
-                                </div>
-                                <div style={{width:"1.5px",height:'14px',backgroundColor:"#6C757D",margin:'7px 5px',}}></div>
-                                <div className='date'>
-                                    <p>April 14 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-4 text-end'>
-                        <BsClipboard/>
-                        <BsBoxArrowUp style={{marginLeft:'10px'}}/>
-                        <BsBookmark style={{marginLeft:'10px'}}/>
-                        </div>
+                <div className='comment-area row align-items-top'>
+                    <div className='comment-box col-7'>
+                        <h3><i style={{color:'#0D6EFD'}} class="fa-solid fa-square"></i>  Virtual Commute</h3>
                     </div>
+                    <div className='col-5 text-end'>
+                    <BsClipboard/>
+                    <BsBoxArrowUp style={{marginLeft:'10px'}}/>
+                    <BsBookmark style={{marginLeft:'10px'}}/>
+                    </div>
+                </div>
+                <div className='comment-date d-flex '>
+                    <div className='mail'>
+                         <p>microsoft.com</p>
+                        </div>
+                        <div style={{width:"1.5px",height:'14px',backgroundColor:"#6C757D",margin:'7px 5px',}}></div>
+                        <div className='date'>
+                      <p>April 14 2022</p>
+                     </div>
+                     </div>
                     <div className='comment-description '>
                         <div className='comment-top'>
                         <p>The Up-next card prompts you to "wrap up your day," you can select it to start your virtual commute now. If you've configured virtual commute reminders, the message appears 30 minutes before the time that you configured. For information about making this and other settings, see Insights app settings.</p>
@@ -177,20 +179,32 @@ const [open,setOPen]=useState(false)
                         </div>
                         <div className='border-bottom my-5'></div>
                         <div className='text-center mt-5'>
-                        <button className='comment-bt-1 btn btn-primary me-2'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
-                        <button className='comment-bt-2 btn border border-2 border-primary text-primary '><i class="fa-regular fa-square-plus"></i> View Original</button>
+                        <div className='d-flex justify-content-center'>
+                       <button type="button" className='btn btn-primary me-2 px-2 px-md-4'aria-controls='collapse' onClick={()=>setOPen(!open)}> <i class="fa-regular fa-square-plus"></i> Share Summary</button>
+                       <button className='comment-bt-2 btn border border-2 border-primary text-primary px-2 px-md-4'><i class="fa-regular fa-square-plus"></i> View Original</button>
+                       </div>
                         {/* ------collapse---------- */}
                         <Collapse in={open}>
-                        <div  style={{marginLeft:"20%",width:"28%"}} className=' mt-2 py-2  border position-absolute' id="collapse"> 
+                        <div  style={{marginLeft:"20%",width:"50%"}} className=' mt-2 py-2 position-absolute' id="collapse"> 
                         <BsFacebook className='me-3 fs-3' style={{color:"#4267B2"}}/>
                         <BsLinkedin className='fs-3' style={{color:'#0072b1'}}/>
                         <BsTwitter className='ms-3 fs-3'style={{color:'#00acee '}}/>
                        </div>
                        </Collapse>
-                        <div className=' w-75  mx-auto mt-5 pt-2' >
+                        <div className=' w-100  mx-auto mt-5 pt-2' >
                         <h5 >How was This Summery?</h5>
-                          <BsEmojiAngry style={{fontSize:"25px"}}/>  
-                          <BsEmojiHeartEyes style={{fontSize:"25px",marginLeft:"25px"}}/>  
+                        < BsEmojiSmile  style={{fontSize:'25px',color:"#FFDA6A"}}/>  
+                        < BsEmojiSmile className='mx-2' style={{fontSize:'25px',color:"#FFDA6A"}}/> 
+                        {/* ------for gradient color----- */}
+                         <svg width="0" height="0">
+                         <linearGradient id="red-gradient" y1="50%" y2="50%" x1="0%" x2="100%">
+                         <stop stopColor="#FFDA6A " offset="0%" />
+                         <stop stopColor="#E9ECEF" offset="100%" />
+                        </linearGradient>
+                        </svg>
+                          < BsEmojiSmile style={{fill: "url(#red-gradient)",fontSize:'25px'}}/> 
+                        < BsEmojiSmile className='mx-2'style={{fontSize:'25px',color:"#E9ECEF"}}/> 
+                        < BsEmojiSmile style={{fontSize:'25px',color:"#E9ECEF"}}/> 
                        </div>
                        </div>
                     </div>
