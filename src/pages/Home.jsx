@@ -118,8 +118,8 @@ const [open,setOPen]=useState(false)
                          <Collapse in={open}>
                         <div style={{marginLeft:"20%",width:"50%"}} className='position-absolute mt-2 py-2' id="collapse">
                            <BsFacebook className='me-3 fs-4' style={{color:"#4267B2"}}/>
-                            <BsLinkedin className='fs-4' style={{color:'#0072b1'}}/>
-                            <BsTwitter className='ms-3 fs-4'style={{color:'#00acee '}}/>
+                            <BsLinkedin className='fs-5' style={{color:'#0072b1'}}/>
+                            <BsTwitter className='ms-3 fs-5'style={{color:'#00acee '}}/>
                        </div>
                        </Collapse>
                         <div className=' w-100 mx-auto mt-5 pt-2'>
@@ -186,9 +186,9 @@ const [open,setOPen]=useState(false)
                         {/* ------collapse---------- */}
                         <Collapse in={open}>
                         <div  style={{marginLeft:"20%",width:"50%"}} className=' mt-2 py-2 position-absolute' id="collapse"> 
-                        <BsFacebook className='me-3 fs-3' style={{color:"#4267B2"}}/>
-                        <BsLinkedin className='fs-3' style={{color:'#0072b1'}}/>
-                        <BsTwitter className='ms-3 fs-3'style={{color:'#00acee '}}/>
+                        <BsFacebook className='me-3 fs-4' style={{color:"#4267B2"}}/>
+                        <BsLinkedin className='fs-4' style={{color:'#0072b1'}}/>
+                        <BsTwitter className='ms-3 fs-4'style={{color:'#00acee '}}/>
                        </div>
                        </Collapse>
                         <div className=' w-100  mx-auto mt-5 pt-2' >
